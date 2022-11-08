@@ -125,6 +125,8 @@ body {
 }
 
 .header__logo-img {
+    position: relative;
+    z-index: 100;
     margin-right: 14px;
 }
 
@@ -167,7 +169,10 @@ body {
     width: 100%;
 }
 
-.menu__burger {
+/* ----------------------------------------------burger */
+
+.menu__burger,
+.menu__close-button {
     display: none;
     position: relative;
     width: 24px;
@@ -201,19 +206,29 @@ body {
     top: 0px;
 }
 
+.menu__close-button::before,
+.menu__close-button::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: relative;
+    background-color: #000000;
+}
+
+.menu__close-button::before {
+    top: 1px;
+    transform: rotate(35deg);
+}
+
+.menu__close-button::after {
+    top: -1px;
+    transform: rotate(-35deg);
+}
+
 /* tablet */
 @media (max-width: 1250px) {
     .header__container {
         min-height: 108px;
-    }
-
-    .menu__link {
-        color: #000000;
-        font-size: 18px;
-    }
-
-    .menu__item::after {
-        background-color: #68B738;
     }
 
     .header__logo-img img {
@@ -223,29 +238,26 @@ body {
     .header .logo-text {
         font-size: 20px;
     }
+
+    .menu__item::after {
+        background-color: #68B738;
+    }
+
+    .menu__link {
+        color: #000000;
+        font-size: 18px;
+    }
 }
 
 /* mobile */
 @media (max-width: 770px) {
     .header {
-        position: static;
+        position: relative;
     }
 
     .header__container {
         min-height: 66px;
         justify-content: space-between;
-    }
-
-    .header__menu {
-        margin-left: 0;
-    }
-
-    .menu__list {
-        display: none;
-    }
-
-    .menu__burger {
-        display: flex;
     }
 
     .header__logo-img {
@@ -254,6 +266,53 @@ body {
 
     .header__logo-img img {
         height: 38px;
+    }
+
+    .header__menu {
+        margin-left: 0;
+    }
+
+    .header:target .menu__list {
+        left: 0;
+    }
+
+    .header:target .menu__burger {
+        display: none;
+    }
+
+    .header:target .menu__close-button {
+        display: flex;
+    }
+
+    .menu__list {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        padding: 80px 0;
+        flex-direction: column;
+        align-items: center;
+        transition: left 0.5s;
+
+        background-color: #FFFFFF;
+    }
+
+    .menu__item {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .menu__item::after {
+        transition: none;
+    }
+
+    .menu__link {
+        font-size: 20px;
+    }
+
+    .menu__burger {
+        display: flex;
     }
 }
 
