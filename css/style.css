@@ -91,12 +91,12 @@ body {
 }
 
 /* mobile */
-/* @media (max-width: 770px) {
+@media (max-width: 690px) {
     [class*="__container"] {
-        max-width: 320px;
+        max-width: 580px;
         padding: 0 20px;
     }
-} */
+}
 
 
 /* ----------------------------------------------logo */
@@ -463,17 +463,23 @@ body {
 
 /* mobile */
 @media (max-width: 690px) {
+    .hero-section {
+        position: relative;
+    }
+
     .hero-section__container {
         position: static;
     }
 
     .hero-section__container::after {
-        top: 66px;
+        top: 0;
         left: 0;
-        height: 305px;
+        height: 50%;
         width: 100vw;
 
-        background-image: none;
+        background-image: url(../img/hero-section/hero-section\ background\ mobile.png);
+        background-position: center;
+        background-size: contain;
     }
 
     .hero-section__content {
@@ -515,12 +521,6 @@ body {
 
 /* mobile */
 @media (max-width: 414px) {
-    .hero-section__container::after {
-        background-image: url(../img/hero-section/hero-section\ background\ mobile.png);
-        background-position: center;
-        background-size: contain;
-    }
-
     .title {
         font-size: 36px;
     }
