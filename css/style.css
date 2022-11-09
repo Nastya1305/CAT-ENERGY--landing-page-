@@ -73,21 +73,30 @@ body {
     padding: 0 30px;
 }
 
-/* tablet */
+/* PC */
 @media (max-width: 1250px) {
     [class*="__container"] {
-        max-width: 770px;
+        max-width: 1140px;
+        padding: 0 30px;
+    }
+}
+
+
+/* tablet */
+@media (max-width: 1140px) {
+    [class*="__container"] {
+        max-width: 960px;
         padding: 0 30px;
     }
 }
 
 /* mobile */
-@media (max-width: 770px) {
+/* @media (max-width: 770px) {
     [class*="__container"] {
         max-width: 320px;
         padding: 0 20px;
     }
-}
+} */
 
 
 /* ----------------------------------------------logo */
@@ -225,14 +234,12 @@ body {
     transform: rotate(-35deg);
 }
 
+
+
 /* tablet */
-@media (max-width: 1250px) {
+@media (max-width: 1140px) {
     .header__container {
         min-height: 108px;
-    }
-
-    .header__logo-img img {
-        height: 52px;
     }
 
     .header .logo-text {
@@ -245,33 +252,19 @@ body {
 
     .menu__link {
         color: #000000;
+        font-size: 20px;
+    }
+}
+
+/* tablet */
+@media (max-width: 820px) {
+    .menu__link {
         font-size: 18px;
     }
 }
 
-/* mobile */
-@media (max-width: 770px) {
-    .header {
-        position: relative;
-    }
-
-    .header__container {
-        min-height: 66px;
-        justify-content: space-between;
-    }
-
-    .header__logo-img {
-        margin-right: 0;
-    }
-
-    .header__logo-img img {
-        height: 38px;
-    }
-
-    .header__menu {
-        margin-left: 0;
-    }
-
+/* tablet */
+@media (max-width: 735px) {
     .header:target .menu__list {
         left: 0;
     }
@@ -313,6 +306,30 @@ body {
 
     .menu__burger {
         display: flex;
+    }
+}
+
+/* mobile */
+@media (max-width: 690px) {
+    .header {
+        position: relative;
+    }
+
+    .header__container {
+        min-height: 66px;
+        justify-content: space-between;
+    }
+
+    .header__logo-img {
+        margin-right: 0;
+    }
+
+    .header__logo-img img {
+        height: 38px;
+    }
+
+    .header__menu {
+        margin-left: 0;
     }
 }
 
@@ -385,6 +402,7 @@ body {
 
     font-family: 'Oswald';
     font-size: 20px;
+    line-height: 1.5;
     text-transform: uppercase;
     color: #000000;
 }
@@ -398,28 +416,53 @@ body {
 }
 
 /* tablet */
-@media (max-width: 1250px) {
+@media (max-width: 1140px) {
     .hero-section__container::after {
         height: 0;
     }
 
     .hero-section__content {
         width: 100%;
-        padding: 140px 208px 426px 83px;
+        padding: 140px 208px 310px 83px;
     }
 
     .hero-section__img {
         top: auto;
         left: auto;
         bottom: 0;
-        right: 50%;
+        right: 35%;
         transform: translate(50%, 0);
         height: auto;
     }
 }
 
+/* tablet */
+@media (max-width: 920px) {
+    .hero-section__content {
+        padding-bottom: 410px;
+    }
+
+    .hero-section__img {
+        right: 10%;
+        transform: translate(0);
+    }
+}
+
+
+/* tablet */
+@media (max-width: 735px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .button {
+        font-size: 18px;
+    }
+}
+
+
 /* mobile */
-@media (max-width: 770px) {
+@media (max-width: 690px) {
     .hero-section__container {
         position: static;
     }
@@ -430,9 +473,7 @@ body {
         height: 305px;
         width: 100vw;
 
-        background-image: url(../img/hero-section/hero-section\ background\ mobile.png);
-        background-position: center;
-        background-size: contain;
+        background-image: none;
     }
 
     .hero-section__content {
@@ -440,7 +481,7 @@ body {
     }
 
     .title {
-        font-size: 36px;
+        font-size: 42px;
     }
 
     .hero-section__title {
@@ -451,14 +492,14 @@ body {
 
     .hero-section__subtitle {
         margin-bottom: 29px;
-        font-size: 14px;
+        font-size: 18px;
         text-align: center;
         color: #FFFFFF;
     }
 
     .hero-section__img {
+        margin: 0 auto;
         position: static;
-        transform: translate(0, 0);
     }
 
     .hero-section__img img {
@@ -467,7 +508,35 @@ body {
     }
 
     .button {
-        font-size: 14px;
+        font-size: 18px;
         width: 100%;
+    }
+}
+
+/* mobile */
+@media (max-width: 414px) {
+    .hero-section__container::after {
+        background-image: url(../img/hero-section/hero-section\ background\ mobile.png);
+        background-position: center;
+        background-size: contain;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .hero-section__subtitle {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+}
+
+/* mobile */
+@media (max-width: 300px) {
+    .title {
+        font-size: 24px;
     }
 }
