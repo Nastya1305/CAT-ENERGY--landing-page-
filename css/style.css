@@ -623,6 +623,8 @@ body {
 
 
 .category-item__link {
+    display: block;
+    position: relative;
     font-family: 'Oswald';
     font-weight: 400;
     font-size: 20px;
@@ -632,7 +634,17 @@ body {
 }
 
 .category-item__link::after {
-    content: url("../img/categories/arrow.png");
+    display: inline-block;
+    content: "";
+    background-image: url("../img/categories/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 30%;
     margin-left: 28px;
     transition: margin 0.8s;
 }
