@@ -633,7 +633,7 @@ body {
 
 
 .category-item__link {
-    display: inline;
+    display: flex;
     position: relative;
     font-family: 'Oswald';
     font-weight: 400;
@@ -644,7 +644,6 @@ body {
 }
 
 .category-item__link::after {
-    display: inline;
     content: "";
     background-image: url("../img/categories/arrow.svg");
     background-repeat: no-repeat;
@@ -652,15 +651,15 @@ body {
 
     position: absolute;
     top: 50%;
+    right: -40%;
     transform: translateY(-50%);
     height: 100%;
     width: 30%;
-    margin-left: 28px;
-    transition: margin 0.8s;
+    transition: right 0.8s;
 }
 
 .category-item__link:hover:after {
-    margin-left: 45px;
+    right: -55%;
 
 }
 
