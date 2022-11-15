@@ -623,7 +623,7 @@ body {
 
 
 .category-item__link {
-    display: inline-block;
+    display: inline;
     position: relative;
     font-family: 'Oswald';
     font-weight: 400;
@@ -634,7 +634,7 @@ body {
 }
 
 .category-item__link::after {
-    display: inline-block;
+    display: inline;
     content: "";
     background-image: url("../img/categories/arrow.svg");
     background-repeat: no-repeat;
