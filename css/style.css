@@ -385,6 +385,7 @@ body {
 
     background: #65A93C;
     background-image: url(../img/hero-section/hero-section\ background.png);
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -413,6 +414,13 @@ body {
     left: 50%;
     transform: translate(-29%, 0);
     z-index: -10;
+}
+
+
+@media (max-width: 1250px) {
+    .hero-section__content {
+        padding-bottom: 117px;
+    }
 }
 
 /* tablet */
@@ -544,11 +552,13 @@ body {
 
 /* ----------------------------------------------categories */
 
+.categories__content {
+    padding: 80px 0 25px;
+}
 
 .categories_row {
     display: flex;
     flex-wrap: wrap;
-    padding: 80px 0 25px;
     margin: 0 -40px;
 }
 
@@ -656,10 +666,12 @@ body {
 
 /* tablet */
 @media (max-width: 1140px) {
+    .categories__content {
+        padding: 0;
+    }
+
     .categories_row {
         flex-direction: column;
-        padding-top: 0;
-        padding-bottom: 0;
     }
 
     .category-item {
