@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6c9afe9c-eb11-473e-be9f-4c59972c614f&lang=ru_RU" type="text/javascript"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>CatEnergy</title>
 </head>
@@ -157,11 +158,24 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </section>
+
+            <section class="location">
+                <div class="location__container">
+                    <div class="location__cooperation">
+                        <h4 class="location__title">приглашаем к сотрудничеству дилеров!</h4>
+                        <address class="location__address"> 
+                            <span>ул. Большая Конюшенная, д. 19/8</span>
+                            <span>Санкт-Петербург</span>
+                        </address>
+                    </div>
+                </div>
+                <div class="location__map" id="map"></div>
+            </section>
+
         </main>
 
 
@@ -169,6 +183,7 @@
             footer
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
