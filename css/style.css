@@ -346,6 +346,7 @@ body {
 .title {
     font-family: 'Oswald';
     font-size: 60px;
+    line-height: 1;
     color: #000000;
 }
 
@@ -463,7 +464,6 @@ body {
 @media (max-width: 735px) {
     .title {
         font-size: 50px;
-        /* line-height: 1.4; */
     }
 
     .button {
