@@ -1412,10 +1412,10 @@ body {
 .footer__content {
     height: 150px;
     display: flex;
+    justify-content: space-between;
 }
 
 .footer__column {
-    flex: 0 1 33.33333%;
     display: flex;
     align-items: center;
     justify-content: center;
