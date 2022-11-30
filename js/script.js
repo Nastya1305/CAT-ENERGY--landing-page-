@@ -1,3 +1,5 @@
+//---------------------------------------------------------------------------------- СЛАЙДЕР BEFORE AFTER
+
 document.querySelectorAll(".image-slider").forEach(function (slider) {
     let range = slider.querySelector("input");
     let beforeBlock = slider.querySelector(".image-slider__before");
@@ -17,6 +19,7 @@ document.querySelectorAll(".image-slider").forEach(function (slider) {
 });
 
 
+//---------------------------------------------------------------------------------- КАРТА
 
 ymaps.ready(init);
 function init() {
@@ -38,24 +41,24 @@ function init() {
 
     window.addEventListener('resize', function () {
         let windowWidth = document.documentElement.clientWidth;
-        if (windowWidth <= 1140) {
+        if (windowWidth <= 1140) { //tablet, mobile
             myMap.setCenter(myPlacemark.geometry.getCoordinates());
+            myMap.behaviors.disable('drag');
         } else {
             myMap.setCenter(desktopCenter);
+            myMap.behaviors.enable('drag');
         }
 
-        if (windowWidth <= 690) {
+        if (windowWidth <= 690) { //mobile
             myPlacemark.options.set({
                 iconImageSize: [54, 62],
                 iconImageOffset: [-27, -62]
             });
-            myMap.behaviors.disable('drag');
         } else {
             myPlacemark.options.set({
                 iconImageSize: [92, 105],
                 iconImageOffset: [-46, -105]
             });
-            myMap.behaviors.enable('drag');
         }
     });
 
