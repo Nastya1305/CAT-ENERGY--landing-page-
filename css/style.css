@@ -1163,6 +1163,7 @@ body {
     width: 100%;
     background: transparent;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .image-slider__range>input:focus {
@@ -1213,6 +1214,7 @@ body {
 
 .image-slider__range>input::-webkit-slider-thumb {
     -webkit-appearance: none;
+    appearance: none;
     width: 34px;
     height: 34px;
     background-color: #68B738;
