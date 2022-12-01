@@ -49,6 +49,10 @@ body {
     font-size: 16px;
 }
 
+body._lock {
+    overflow: hidden;
+}
+
 input,
 button,
 textarea {
@@ -182,8 +186,7 @@ body {
 
 /* ----------------------------------------------burger */
 
-.menu__burger,
-.menu__close-button {
+.menu__burger {
     display: none;
     position: relative;
     width: 24px;
@@ -217,8 +220,12 @@ body {
     top: 0px;
 }
 
-.menu__close-button::before,
-.menu__close-button::after {
+.menu__burger._close span {
+    display: none;
+}
+
+.menu__burger._close::before,
+.menu__burger._close::after {
     content: "";
     width: 100%;
     height: 2px;
@@ -226,12 +233,12 @@ body {
     background-color: #000000;
 }
 
-.menu__close-button::before {
+.menu__burger._close::before {
     top: 1px;
     transform: rotate(35deg);
 }
 
-.menu__close-button::after {
+.menu__burger._close::after {
     top: -1px;
     transform: rotate(-35deg);
 }
@@ -267,30 +274,37 @@ body {
 
 /* tablet */
 @media (max-width: 735px) {
-    .header:target .menu__list {
-        left: 0;
-    }
-
-    .header:target .menu__burger {
-        display: none;
-    }
-
-    .header:target .menu__close-button {
-        display: flex;
-    }
-
-    .menu__list {
+    .menu {
         position: fixed;
         top: 0;
         left: -100%;
         width: 100%;
         height: 100%;
-        padding: 80px 0;
+        padding-top: 150px;
+        transition: left 0.5s;
+        overflow: auto;
+        background-color: #FFFFFF;
+    }
+
+    .menu._active {
+        left: 0;
+    }
+
+    .menu._active::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 108px;
+        z-index: 70;
+        top: 0;
+        left: 0;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+    }
+
+    .menu__list {
         flex-direction: column;
         align-items: center;
-        transition: left 0.5s;
-
-        background-color: #FFFFFF;
     }
 
     .menu__item {
@@ -306,8 +320,13 @@ body {
         font-size: 20px;
     }
 
-    .menu__burger {
+    .menu__burger,
+    .menu__burger._close {
         display: flex;
+    }
+
+    .menu__burger {
+        margin-left: auto;
     }
 }
 
@@ -320,6 +339,14 @@ body {
     .header__container {
         min-height: 66px;
         justify-content: space-between;
+    }
+
+    .menu._active::before {
+        height: 66px;
+    }
+
+    .header__logo-text {
+        display: none;
     }
 
     .header__logo-img {

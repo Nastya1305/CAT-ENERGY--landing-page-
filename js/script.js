@@ -1,3 +1,17 @@
+//---------------------------------------------------------------------------------- МЕНЮ-БУРГЕР
+
+const menuBurger = document.querySelector(".menu__burger");
+if (menuBurger) {
+    const menu = document.querySelector(".menu");
+
+    menuBurger.addEventListener('click', function (e) {
+        menuBurger.classList.toggle("_close");
+        menu.classList.toggle("_active");
+        document.body.classList.toggle("_lock");
+    });
+}
+
+
 //---------------------------------------------------------------------------------- СЛАЙДЕР BEFORE AFTER
 
 document.querySelectorAll(".image-slider").forEach(function (slider) {
@@ -10,7 +24,6 @@ document.querySelectorAll(".image-slider").forEach(function (slider) {
 
 
     range.oninput = function () {
-
         beforeBlock.style.width = this.value + "%";
         afterBlock.style.width = (100 - this.value) + "%";
         beforeImg.style.transform = `translateX(${100 - this.value}%)`;
