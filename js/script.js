@@ -1,3 +1,5 @@
+"use strict";
+
 //---------------------------------------------------------------------------------- МЕНЮ-БУРГЕР
 
 const menuBurger = document.querySelector(".menu__burger");
