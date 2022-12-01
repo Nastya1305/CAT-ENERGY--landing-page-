@@ -1,4 +1,4 @@
-# [Landing page](https://nastya1305.github.io/CAT-ENERGY--landing-page-/) for cat food
+# [Landing page](https://nastya1305.github.io/cat-energy/) for cat food
 
 ### Technology stack:
 <img src="https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=HTML5&logoColor=E34F26"/> <img src="https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=CSS3&logoColor=1572B6"/> <img src="https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=JavaScript&logoColor=F7DF1E"/>
