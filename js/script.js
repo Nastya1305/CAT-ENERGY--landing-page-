@@ -42,8 +42,8 @@ document.querySelectorAll(".image-slider").forEach(function (slider) {
     let beforeBlock = slider.querySelector(".image-slider__before");
     let afterBlock = slider.querySelector(".image-slider__after");
 
-    let beforeImg = slider.querySelector(".image-slider__before>img");
-    let afterImg = slider.querySelector(".image-slider__after>img");
+    let beforeImg = slider.querySelector(".image-slider__before img");
+    let afterImg = slider.querySelector(".image-slider__after img");
 
 
     range.oninput = function () {
